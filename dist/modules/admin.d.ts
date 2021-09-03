@@ -1,0 +1,16 @@
+import * as admin from 'firebase-admin';
+export declare const auth: admin.auth.Auth;
+export declare const db: FirebaseFirestore.Firestore;
+export declare const storage: admin.storage.Storage;
+export declare const message: admin.messaging.Messaging;
+export declare const user: (uid: string) => Promise<FirebaseFirestore.DocumentData | undefined>;
+export declare const id: () => string;
+export declare const get: (c: string, d: string) => Promise<FirebaseFirestore.DocumentData | undefined>;
+export declare const set: (c: string, d: string, data: any) => Promise<FirebaseFirestore.WriteResult>;
+export declare const update: (c: string, d: string, data: any) => Promise<FirebaseFirestore.WriteResult>;
+export declare const del: (r: string, id: string) => Promise<FirebaseFirestore.WriteResult>;
+export declare const add: (r: string, data: any) => Promise<FirebaseFirestore.DocumentReference<FirebaseFirestore.DocumentData>>;
+export declare const col: (p: any, l?: any) => FirebaseFirestore.CollectionReference<FirebaseFirestore.DocumentData>;
+export declare const docs: (p: any, i?: any) => Promise<any>;
+export declare const notify: (p: any, user: any) => Promise<{}>;
+export declare const timestamp: (d?: any) => FirebaseFirestore.Timestamp;
